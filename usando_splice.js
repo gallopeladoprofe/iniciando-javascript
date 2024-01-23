@@ -23,5 +23,12 @@ const mezclar = cortadito_1.concat(cortadito_2);
 
 
 // borrar elementos
+debugger;
 arrDeFiguras.splice(2, 4, "rombo");
+console.log(arrDeFiguras);
+//borrar el ultimo
+arrDeFiguras.pop();
+console.log(arrDeFiguras);
+//borrar el primero
+arrDeFiguras.shift();
 console.log(arrDeFiguras);
