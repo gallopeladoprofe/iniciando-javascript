@@ -7,6 +7,7 @@ class Groot {
         // atributo o propiedad privada
         this.#fechaDeAparicion = fechaDeAparicion;
     }
+    succionarMadera() {}
 }
 
 // crear la instancia
