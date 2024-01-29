@@ -3,6 +3,9 @@ class Animal {
     constructor(patas) {
         this.#patas = patas;
     }
+    get patas() {
+        return this.#patas;
+    }
 }
 
 class Mamifero extends Animal {
@@ -32,3 +35,10 @@ class Ave extends Animal {
         super(patas);
     }
 }
+
+debugger;
+//creacion de instancias
+const pez = new Pez(0);
+console.log(pez.patas);
+const mam = new Mamifero(2);
+console.log(mam.patas);
