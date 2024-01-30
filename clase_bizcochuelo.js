@@ -35,3 +35,4 @@ console.log(marmolado.peso);
 console.log(marmolado.forma);
 
 const bizchVaini = new Bizcochuelo("redondo", "vainilla", 10, "amarillento", "vainilla");
+console.log(`El segundo objeto tiene la forma ${bizchVaini.forma}`);
