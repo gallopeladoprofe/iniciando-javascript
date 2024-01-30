@@ -1,4 +1,5 @@
 class Animal {
+    //atributos priavados
     #patas = 4;
     constructor(patas) {
         this.#patas = patas;
@@ -9,9 +10,11 @@ class Animal {
 }
 
 class Mamifero extends Animal {
-    constructor(patas) {
+    #tipoPelaje;
+    constructor(patas, tipoPelaje) {
         // cuando se hace la herencia, es obligatorio esto:
         super(patas);
+        this.#tipoPelaje = tipoPelaje;
     }
 }
 
@@ -40,5 +43,6 @@ debugger;
 //creacion de instancias
 const pez = new Pez(0);
 console.log(pez.patas);
-const mam = new Mamifero(2);
+const mam = new Mamifero(2, "lanudo");
+
 console.log(mam.patas);
