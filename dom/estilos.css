@@ -1,0 +1,23 @@
+input, label, h1, button {
+    color:#3D80CC;
+    border-color: #3D80CC;
+    border-radius: 2.5px;
+}
+
+.input-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(211, 27%, 85%);
+    padding-bottom: 3%;
+}
+
+.sexo-item {
+    display: flex;
+    flex-direction: row;
+}

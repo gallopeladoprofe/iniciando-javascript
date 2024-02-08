@@ -1,0 +1,17 @@
+.sillas-marrones {
+    background-color: brown;
+    color:white;
+}
+
+.sillas-azules {
+    background-color: blue;
+    color:white;
+}
+
+.sillas-acolchadas-blancas {
+    background-color: white;
+    color: black;
+    border-style: solid;
+    margin-right: 20px;
+    margin-left: 20px;
+}

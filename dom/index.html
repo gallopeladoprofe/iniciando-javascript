@@ -8,21 +8,33 @@
 </head>
 <body>
     
-    <h1>Formulario de Registro de Usuario</h1>
-    <label for="txtNombres">Nombres:</label><br>
-    <input type="text" id="txtNombres"><br>
+    <div class="contenedor">
+        <h1>Formulario de Registro de Usuario</h1>
 
-    <label for="txtApellidos">Apellidos:</label><br>
-    <input type="text" id="txtApellidos"><br>
-
-    <label>Sexo:</label><br>
-    <input type="radio" id="radSexM" name="sexo" value="M">
-    <label for="radSexM">M</label><br>
-    <input type="radio" id="radSexF" name="sexo" value="F">
-    <label for="radSexM">F</label><br>
-
-    <button type="button" id="btnCrear">Crear</button>
-    <button type="button" id="btnSalir">Salir</button>
+        <div>
+            <label for="txtNombres">Nombres:</label><br>
+            <input type="text" class="input-item" id="txtNombres"><br>
+        </div>
+        
+        <div>
+            <label for="txtApellidos">Apellidos:</label><br>
+            <input type="text" class="input-item" id="txtApellidos"><br>
+        </div>
+        
+        <div class="sexo-item">
+            <label>Sexo:</label><br>
+            <input type="radio" id="radSexM" class="input-item" name="sexo" value="M">
+            <label for="radSexM">M</label><br>
+            <input type="radio" id="radSexF" class="input-item" name="sexo" value="F">
+            <label for="radSexM">F</label><br>
+        </div>
+        
+        <div>
+            <button type="button" id="btnCrear">Crear</button>
+            <button type="button" id="btnSalir">Salir</button>
+        </div>
+    
+    </div>
 
     <script src="./controlador.js"></script>
 </body>
