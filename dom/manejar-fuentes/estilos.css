@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Alkhemikal;
+    src: url("./fonts/Alkhemikal.ttf") format("truetype");
+}
+
+body {
+    font-family: Alkhemikal;
+}
