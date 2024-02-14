@@ -18,23 +18,36 @@ function cambiarColor(color="red") {
 }
 
 function agregarEventos() {
-    document.getElementById("btnarriba").addEventListener("click", function() {
+    const btnarriba = document.getElementById("btnarriba");
+    const btnizquierda = document.getElementById("btnizquierda");
+    const btnderecha = document.getElementById("btnderecha");
+    const btnabajo = document.getElementById("btnabajo");
+    btnarriba.addEventListener("click", function() {
         cambiarColor("#AEDA97");
     });
-    document.getElementById("btnizquierda").addEventListener("click", function() {
+    btnizquierda.addEventListener("click", function() {
         cambiarColor("#97DAC6");
     });
-    document.getElementById("btnderecha").addEventListener("click", function() {
+    btnderecha.addEventListener("click", function() {
         cambiarColor("#97B3DA");
     });
-    document.getElementById("btnabajo").addEventListener("click", function() {
+    btnabajo.addEventListener("click", function() {
         cambiarColor("#C197DA");
     });
 
     document.addEventListener("keydown", function(e) {
         console.log(e);//explorar por favor
         if(e.key === "ArrowUp") {
-            document.getElementById("btnarriba").click();
+            btnarriba.click();
+        }
+        if(e.key === "ArrowRight") {
+            btnderecha.click();
+        }
+        if(e.key === "ArrowDown") {
+            btnabajo.click();
+        }
+        if(e.key === "ArrowLeft") {
+            btnizquierda.click();
         }
     });
 }
