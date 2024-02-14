@@ -1,0 +1,36 @@
+.mando {
+    background-color: antiquewhite;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+}
+
+#derecha, #izquierda {
+    display: flex;
+    align-items: center;
+}
+
+
+.item {
+    /* border-color: green;
+    border-style: solid; */
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100px;
+}
+
+.item button {
+    width: inherit;
+}
+
+#objeto {
+    height: 50px;
+}
+
+#objeto canvas {
+    width: inherit;
+    height: inherit;
+}
