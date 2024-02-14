@@ -30,6 +30,13 @@ function agregarEventos() {
     document.getElementById("btnabajo").addEventListener("click", function() {
         cambiarColor("#C197DA");
     });
+
+    document.addEventListener("keydown", function(e) {
+        console.log(e);//explorar por favor
+        if(e.key === "ArrowUp") {
+            document.getElementById("btnarriba").click();
+        }
+    });
 }
 //funcion principal o main
 document.addEventListener("DOMContentLoaded", function() {
