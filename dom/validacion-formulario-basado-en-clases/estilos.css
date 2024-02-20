@@ -1,5 +1,8 @@
-input, label, h1, button {
-    color:#3D80CC;
+input,
+label,
+h1,
+button {
+    color: #3D80CC;
     border-color: #3D80CC;
     border-radius: 2.5px;
 }
@@ -20,4 +23,21 @@ input, label, h1, button {
 .sexo-item {
     display: flex;
     flex-direction: row;
+}
+
+
+/* estilos para el indexUsuarios */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: rigth;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
