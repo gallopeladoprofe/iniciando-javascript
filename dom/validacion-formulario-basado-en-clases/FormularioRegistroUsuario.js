@@ -27,7 +27,9 @@ class FormularioRegistroUsuario {
     }
     #gestionarException(error) {
         if(!"cause" in error) return;
-        alert(error.opciones.errmsg);
+        if(error.opciones)
+            alert(error.opciones.errmsg);
+        return;
     }
     eventos() {
         const t = this;
