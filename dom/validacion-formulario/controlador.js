@@ -64,8 +64,24 @@ function capturarDatosDelFormulario() {
     };
     console.log(usuario);
 
+    // revisar si existe la listaUsuarios
+    if(!localStorage.getItem("listaUsuarios")) {
+        //crear la coleccion
+        localStorage.setItem("listaUsuarios", JSON.stringify([usuario]));
+    } else {
+        //si existe la coleccion
+        //deserializacion
+        const listaUsuarios = JSON.parse(localStorage.getItem("listaUsuarios"));
+        listaUsuarios.push(usuario);
+        //serializacion
+        localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
+    }
+
+    //todo se guardo
+    location.replace('./indexUsuarios.html');
+
     //Proceso de guardado
-    const crearJsonUsuario = JSON.stringify(usuario);
-    console.log(crearJsonUsuario);
-    localStorage.setItem("usuario", crearJsonUsuario);
+    //const crearJsonUsuario = JSON.stringify(usuario);
+    //console.log(crearJsonUsuario);
+    //localStorage.setItem("usuario", crearJsonUsuario);
 }

@@ -1,14 +1,23 @@
+function agregarEventos() {
+    document.getElementById("btnCrearUsuario").addEventListener("click", function() {
+        location.href = "./formularioRegistroUsuario.html";
+        //location.replace("./formularioRegistroUsuario.html");
+    });
+}
+
 
 //crear la zona segura
 document.addEventListener("DOMContentLoaded", function() {
     
+    agregarEventos();
+
     // crear mini bd
-    const listaAGuargar = [
+    /* const listaAGuargar = [
         {id: 1, nombres:"Martin",apellidos:"Coronel", sexo:"masculino"},
         {id: 2, nombres:"Lorena",apellidos:"Vargas", sexo:"femenino"},
         {id: 3, nombres:"Andresa",apellidos:"Del Puerto", sexo:"femenino"},
     ];
-    localStorage.setItem("listaUsuarios", JSON.stringify(listaAGuargar));
+    localStorage.setItem("listaUsuarios", JSON.stringify(listaAGuargar)); */
 
     const tbodyusuario = document.getElementById("tbodyusuario");
     
@@ -18,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if(!listaRecuperadaDeusuarios) return;
 
-    let filas = null;
+    let filas = "";
     for(let usuario of listaRecuperadaDeusuarios) {
         filas += `
             <tr id="${usuario.id}">
@@ -30,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
             </tr>
         `
     }
-    tbodyusuario.innerHTML = filas;
+
+    if(filas) tbodyusuario.innerHTML = filas;
     console.log(filas);
 
 });
