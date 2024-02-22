@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlar Submit</title>
+</head>
+<body>
+    
+    <h4>Como controlar el evento de recarga de formulario</h4>
+
+    <form id="frm">
+        <label for="txtnombre">Nombres:</label>
+        <input type="text" name="txtnombre" id="txtnombre">
+        <input type="submit" value="Enviar" id="btnenviar">
+    </form>
+
+    <script>
+        //zona segura
+        document.addEventListener("DOMContentLoaded", function() {
+            const txtnombre = document.getElementById("txtnombre");
+            //agregamos evento submit al formulario
+            document.getElementById("frm").addEventListener("submit", function(e) {
+                e.preventDefault(); // previene el envio del submit
+                if(txtnombre.value.trim()) {
+                    console.log("enviando");
+                    txtnombre.style.borderColor = "";
+                } else {
+                    txtnombre.style.borderColor = "red";
+                    console.error("hay que validar");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
